@@ -1,0 +1,2 @@
+// /videos.tsx
+'use client';

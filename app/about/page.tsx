@@ -1,0 +1,2 @@
+// /about.tsx
+'use client';
