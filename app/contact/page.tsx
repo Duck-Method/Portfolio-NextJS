@@ -1,7 +1,7 @@
-// /about.tsx
+// /page.tsx
 'use client';
 
-export default function about() {
+export default function contact() {
     return (
         <div>
             

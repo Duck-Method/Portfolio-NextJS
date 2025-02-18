@@ -1,7 +1,7 @@
 'use client';
 import { project } from "../lib/data";
 
-export default function ProfileCard() {
+export default function ProjectCard() {
 
     return (
         <>

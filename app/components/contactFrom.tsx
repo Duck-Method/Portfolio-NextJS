@@ -1,7 +1,7 @@
-// /about.tsx
+// /components/contactFrom.tsx
 'use client';
 
-export default function about() {
+export default function contactForm() {
     return (
         <div>
             
