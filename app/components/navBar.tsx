@@ -1,15 +1,15 @@
 // /components/navBar.tsx
 'use client';
 
-import { NavLink } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function NavBar() {
     return(
         <div>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/projects">Projects</NavLink>
-            <NavLink to="/about">About Me</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
+            <Link href="/">Home</Link>
+            <Link href="/projects">Projects</Link>
+            <Link href="/about">About Me</Link>
+            <Link href="/contact">Contact</Link>
         </div>
     )
 }
