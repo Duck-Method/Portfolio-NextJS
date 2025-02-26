@@ -1,6 +1,6 @@
 // /projects.tsx
 'use client';
-import ProjectCard from "../components/portfolioCard";
+import ProjectCard from "./portfolioCard";
 
 export default function Portfolio() {
     return (
