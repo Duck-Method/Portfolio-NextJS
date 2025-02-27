@@ -13,8 +13,11 @@ export default function ProjectCard() {
 
     return (
         <>
-            {project.map((proj) => (            
-                <div key={proj.id} className={styles.section} onClick={() => handleClick(proj.id)}>
+            {project.map((proj) => {
+                const isActive = selectedId ===proj.id;
+                
+                return (            
+                <div key={proj.id} className={`${styles.section} ${isActive ? styles.active : ''}`} onClick={() => handleClick(proj.id)}>
                     <h3>
                         {proj.name}
                     </h3>
@@ -28,11 +31,11 @@ export default function ProjectCard() {
                                 height={300}
                                 className={styles.image} 
                             /> 
-                            <div>
-                                <a href={proj.liveUrl}>
+                            <div className={styles.spacing}>
+                                <a href={proj.liveUrl} className={styles.button}>
                                     View Live
                                 </a>
-                                <a href={proj.gitUrl}>
+                                <a href={proj.gitUrl} className={styles.button}>
                                     View Code
                                 </a>
                             </div>
@@ -40,7 +43,8 @@ export default function ProjectCard() {
                         </div>
                     )}
                 </div>
-            ))}    
+            );
+            })}    
         </>
     );
 }
