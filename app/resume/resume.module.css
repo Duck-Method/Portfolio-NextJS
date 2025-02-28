@@ -1,0 +1,7 @@
+.resumeBanner {
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    justify-content: space-between;
+}

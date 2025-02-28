@@ -1,0 +1,10 @@
+.button {
+    font-size: 1rem !important;
+    border: solid 1.5px var(--text-color);
+    border-radius: 10px;
+    padding: 0rem 0.5rem;
+}
+
+.clicked {
+    box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.5)
+}
