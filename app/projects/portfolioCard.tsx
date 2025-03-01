@@ -32,10 +32,10 @@ export default function ProjectCard() {
                                 className={styles.image} 
                             /> 
                             <div className={styles.spacing}>
-                                <a href={proj.liveUrl} className={styles.button}>
+                                <a href={proj.liveUrl} target='_blank' rel='noopenr noreferrer' className={styles.button}>
                                     View Live
                                 </a>
-                                <a href={proj.gitUrl} className={styles.button}>
+                                <a href={proj.gitUrl} target='_blank' rel='noopenr noreferrer' className={styles.button}>
                                     View Code
                                 </a>
                             </div>
