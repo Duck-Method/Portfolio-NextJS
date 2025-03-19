@@ -7,30 +7,35 @@
     padding: 0.5rem 1rem;
     border: 3px groove var(--text-color);
     margin: 1rem 0rem;
-    transition: all 0.2s;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
 }
 .section:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 10px var(--glow-color), 0 0 15px var(--text-color);
 }
 .section.active:hover {
-    box-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color);
+    box-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color), inset 0 0 10px rgba(0, 0, 0, 0.5);
+    cursor: default;
 }
 .active {
     transform: translateY(-3px);
-    box-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color);
+    box-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color), inset 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .card {
+    animation: show 0.8s cubic-bezier(0.38, 0.97, 0.56, 0.76) forwards;
+    opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 1rem 2rem;
+    margin: 0.5rem 0;
     border-radius: 10px;
     border: 3px groove var(--text-color);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    transition: all 0.2s;
+    transition:  max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .image {
@@ -44,7 +49,15 @@
     padding: 0rem .35rem;
     border: 3px groove var(--text-color)
 }
-
+.button:hover {
+    box-shadow: 0 0 3px var(--glow-color), 0 0 6px var(--text-color);
+}
 .spacing {
     margin: 0.5rem;
+}
+
+@keyframes show {
+    100% {
+        opacity: 1;
+    }
 }
