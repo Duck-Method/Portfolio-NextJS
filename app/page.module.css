@@ -1,0 +1,17 @@
+.imageLayout {
+    border: 2px groove var(--text-color);
+    float: right;
+    margin-left: 0.5rem;
+    margin-top: 0.15rem;
+}
+
+.divAlign {
+    display: flex;
+    flex-direction: column;
+}
+
+.pAlign {
+    text-wrap: pretty;
+    text-indent: 1.75rem;
+    margin: 0.5rem;
+}

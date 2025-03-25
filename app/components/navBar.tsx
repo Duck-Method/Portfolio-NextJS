@@ -9,8 +9,8 @@ export default function NavBar() {
     return(
         <div className={styles.navBar}>
             <Link className={`${pathname === "/" ? styles.active : ""}`} href="/">Home</Link>
-            <Link className={`${pathname === "/projects" ? styles.active : ""}`} href="/projects">Projects</Link>
             <Link className={`${pathname === "/about" ? styles.active : ""}`} href="/about">About Me</Link>
+            <Link className={`${pathname === "/projects" ? styles.active : ""}`} href="/projects">Projects</Link>
             <Link className={`${pathname === "/contact" ? styles.active : ""}`} href="/contact">Contact</Link>
             <Link className={`${pathname === "/resume" ? styles.active : ""}`} href="/resume">Resume</Link>
         </div>
