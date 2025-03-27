@@ -1,0 +1,39 @@
+.divAlign {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.labelAlign {
+    display: block;
+    width: 57px;
+    margin-top: .75rem;
+    font-weight:bold;
+}
+
+.input {
+    border: 2px solid var(--text-color);
+    background-color: #040d10;
+    color: var(--text-color);
+    padding: .2rem;
+    border-radius: 3px;
+}
+.input:focus {
+    outline: 1px solid black ;
+    box-shadow: 0 0 5px var(--glow-color), 0 0 10px var(--text-color);
+}
+::placeholder {
+    color: var(--text-color);
+    opacity: .75;
+}
+
+.buttonStyle {
+    margin-top: .75rem;
+    border: 2px solid var(--text-color);
+    padding: .2rem;
+    border-radius: 5px;
+    background-color: #040d10;
+    color: var(--text-color);
+}

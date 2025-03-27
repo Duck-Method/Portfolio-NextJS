@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import styles from './contactFrom.module.css'
 
 const formSchema = z.object({
     name: z.string().min(2, 'Name must be at least 2 charachters'),
@@ -51,17 +52,18 @@ export default function ContactFrom() {
     };
 
     return (
-        <div>
-            <form onSubmit={handleSubmit(onSubmit)}>
+        <div className={styles.divAlign}>
+            <form onSubmit={handleSubmit(onSubmit)} >
                 <div>
-                    <label htmlFor="name">
+                    <label htmlFor="name" className={styles.labelAlign}>
                         Name
                     </label>
                     <input 
                         {...register('name')}
                         id='name'
                         placeholder='Your name'
-                        aria-invalid={!!errors.name} 
+                        aria-invalid={!!errors.name}
+                        className={styles.input} 
                     />
                     {errors.name && (
                         <p role= 'alert'>
@@ -70,7 +72,7 @@ export default function ContactFrom() {
                     )}
                 </div>
                 <div>
-                    <label htmlFor="email">
+                    <label htmlFor="email" className={styles.labelAlign}>
                         Email
                     </label>
                     <input 
@@ -79,6 +81,7 @@ export default function ContactFrom() {
                         id='email'
                         placeholder='your@email.com'
                         aria-invalid={!!errors.email}
+                        className={styles.input}
                     />
                     {errors.email && (
                         <p role='alert'>
@@ -87,7 +90,7 @@ export default function ContactFrom() {
                     )}
                 </div>
                 <div>
-                    <label htmlFor="message">
+                    <label htmlFor="message" className={styles.labelAlign}>
                         Message
                     </label>
                     <textarea 
@@ -96,6 +99,7 @@ export default function ContactFrom() {
                         placeholder='Your message...'
                         rows={5}
                         aria-invalid={!!errors.message}
+                        className={styles.input}
                     />
                     {errors.message && (
                         <p role='alert'>
@@ -107,6 +111,7 @@ export default function ContactFrom() {
                     type='submit'
                     disabled={status === 'loading'}
                     aria-disabled={status === 'loading'}
+                    className={styles.buttonStyle}
                 >
                     {status === 'loading' ? (
                         <span >   Sending...
